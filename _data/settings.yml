@@ -3,4 +3,5 @@ menu:
 - {name: 'research', url: '/research'}
 - {name: 'CV', url: '/cv.pdf'}
 
-#- {name: 'Aeg', url: '/aeg_page'}
+etc:
+- {name: 'aeg', url: '/aeg_page'}
