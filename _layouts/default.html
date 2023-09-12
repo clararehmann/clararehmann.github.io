@@ -48,18 +48,18 @@
 			{% unless page.date%}
 				{% if page.title == 'About me' or page.title == '404...' %}
 					<ul>
-						{% for post in site.posts %}
-						<li><a href="{{  post.url }}" title="{{ post.title }}"><img src="/assets/img/file.ico" width="25" height="25" title="{{ post.title }}" />{{ post.title }}</a></li>
-						{% endfor %}
+						{% for item in site.data.settings.menu %}
+							<li> <a href="{{site.github.url }}{{ item.url }}"><img src="/assets/img/file.ico" width="25" height="25" title="{{ item.name }}" />{{ item.name }}</a></li>
+  						{% endfor %}
 					</ul>
 				{% else %}
 					{{ content }}
 				{% endif %}
 			{% else %}
 				<ul>
-					{% for post in site.posts %}
-						<li><a href="{{  post.url }}" title="{{ post.title }}"><img src="/assets/img/file.ico" width="25" height="25" title="{{ post.title }}" />{{ post.title }}</a></li>
-					{% endfor %}
+					{% for item in site.data.settings.menu %}
+							<li> <a href="{{site.github.url }}{{ item.url }}"><img src="/assets/img/file.ico" width="25" height="25" title="{{ item.name }}" />{{ item.name }}</a></li>
+  					{% endfor %}
 					Test text 3
 				</ul>
 			{% endunless %}
