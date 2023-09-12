@@ -1,10 +1,9 @@
-permalink: /:year:month:day/:title
-url: #Your url here
-  #baseurl: "" 
+permalink: /
+url: clararehmann.github.io
 
 # variables
-name: Your Site Name
-description: Your description here
+name: Clara Rehmann
+description: my website :-)
 google_verification: null
 
 
