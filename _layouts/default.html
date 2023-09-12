@@ -44,7 +44,7 @@
 		</div>
 		<div class="post_list">
 			{% unless page.date%}
-				{% if window.location.pathname == '/' %}
+				{% if page.title == site.name %}
 					<ul>
 						Test Text 00
 					</ul>
