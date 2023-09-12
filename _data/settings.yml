@@ -1,6 +1,6 @@
 menu:
 - {name: 'about_me', url: '/about_me'}
-- {name: 'research', url: '/research'}
+- {name: 'research', url: '/research_page'}
 - {name: 'CV', url: '/cv.pdf'}
 
 etc:
