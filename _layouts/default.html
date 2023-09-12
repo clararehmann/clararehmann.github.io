@@ -44,21 +44,21 @@
 		</div>
 		<div class="post_list">
 			{% unless page.date%}
-				Test text 1
+				{% if window.location.pathname == '/' %}
+					Test Text 00
 				{% if page.title == 'me' or page.title == '404...' %}
 					<ul>
 						{% for post in site.posts %}
-						<li><a href="{{  post.url }}" title="{{ post.title }}"><img src="/assets/img/file.ico" width="100" height="100" title="{{ post.title }}" />{{ post.title }}</a></li>
+						<li><a href="{{  post.url }}" title="{{ post.title }}"><img src="/assets/img/file.ico" width="25" height="25" title="{{ post.title }}" />{{ post.title }}</a></li>
 						{% endfor %}
 					</ul>
 				{% else %}
-					Test text 2
 					{{ content }}
 				{% endif %}
 			{% else %}
 				<ul>
 					{% for post in site.posts %}
-						<li><a href="{{  post.url }}" title="{{ post.title }}"><img src="/assets/img/file.ico" width="100" height="100" title="{{ post.title }}" />{{ post.title }}</a></li>
+						<li><a href="{{  post.url }}" title="{{ post.title }}"><img src="/assets/img/file.ico" width="25" height="25" title="{{ post.title }}" />{{ post.title }}</a></li>
 					{% endfor %}
 					Test text 3
 				</ul>
