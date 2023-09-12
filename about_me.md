@@ -1,6 +1,6 @@
 ---
 layout: about_me
-title: About me
+title: about_me
 ---
 
 # test about me page
