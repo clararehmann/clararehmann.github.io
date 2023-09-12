@@ -28,7 +28,7 @@ body {
 	width: 800px;
 	margin: auto;
 	margin-top: 20px;
-	background: #bfb8bf;
+	background: #DDDDDD;
 	border: 2px solid;
 	border-color: #fff8ff #000000 #000000 #fff8ff;
 	padding: 2px 0;
@@ -38,7 +38,7 @@ body {
 	position: relative;
 
 	h1 {
-		color: #bfb8bf;
+		color: black;
 		font-size: 30px;
 		font-weight: bold;
                 font-family: 'Chicago';
@@ -62,7 +62,7 @@ body {
 	}
 
 	.btn {
-		background: #cccccc;
+		background: #DDDDDD;
 		width: 13px;
 		height: 11px;
 		float: right;
@@ -114,7 +114,7 @@ ul.topbar {
 	}
 }
 .post_list, .tag_list, .post_content {
-	background: #fff8ff;
+	background: #DDDDDD;
 	border-width: 2px;
 	border-style: ridge groove groove ridge;
 	border-color: #7f787f #fff8ff #fff8ff #7f787f;
