@@ -50,6 +50,7 @@
 			</ul>
 		</div>
 		<div class="post_list">
+			<!---
 			{% unless page.date%}
 				{% if page.title == 'About me' or page.title == '404...' %}
 					<ul>
@@ -68,7 +69,9 @@
 					Test text 3
 				</ul>
 			{% endunless %}
+			--->
 		</div>
+		<!---
 		<div class="post_total">
 			{% if page.tag %}
 				<div class="left">{{ site.tags[page.tag] | size }} object(s)</div>
@@ -77,6 +80,7 @@
 			{% endif %}
 			<div class="right">&nbsp;</div>
 		</div>
+		--->
 	</div>
 	{% if page.title %}
         <div class="content">
