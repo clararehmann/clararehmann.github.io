@@ -1,4 +1,6 @@
 menu:
-- {name: 'About me', url: '/about_me'}
-- {name: 'Research', url: '/research'}
-- {name: 'Aeg', url: '/aeg_page'}
+- {name: 'about_me', url: '/about_me'}
+- {name: 'research', url: '/research'}
+- {name: 'CV', url: '/cv.pdf'}
+
+#- {name: 'Aeg', url: '/aeg_page'}
