@@ -1,0 +1,4 @@
+menu:
+- {name: 'About me', url: '/about_me'}
+- {name: 'Research', url: '/research'}
+- {name: 'Aeg', url: '/aeg_page'}
