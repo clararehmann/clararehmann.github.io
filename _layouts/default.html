@@ -49,6 +49,7 @@
 		</div>
 	</div>
 	{% if page.title == 'etc' %}
+	<div class="etc_content"
 		<div class="post_list">
 			<ul style="list-style: none;">   
 				{% for item in site.data.settings.etc %}
@@ -56,6 +57,7 @@
  				{% endfor %}
 			</ul>
 		</div>
+	</div>
 	{% else if page.title %}
         <div class="content">
 			<div class="post_title">
