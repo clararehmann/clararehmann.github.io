@@ -48,7 +48,15 @@
 			Welcome to the page :)
 		</div>
 	</div>
-	{% if page.title %}
+	{% if page.title == 'etc' %}
+		<div class="post_list">
+			<ul style="list-style: none;">   
+				{% for item in site.data.settings.etc %}
+				<li> <a href="{{ site.github.url }}/etc{{ item.url }}" title="{{ item.name }}"><img src="/assets/img/file.ico" width="25" height="25" title="{{ item.name }}" />{{ item.name }}</a></li>
+ 				{% endfor %}
+			</ul>
+		</div>
+	{% else if page.title %}
         <div class="content">
 			<div class="post_title">
 				<h1>{{  page.title  }}</h1>
