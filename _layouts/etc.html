@@ -1,16 +1,6 @@
 ---
 layout: default
-title: Extras
+title: etc
 ---
 
-<link rel="stylesheet" href="/assets/css/atom-one-light.css">
-<link rel="stylesheet" type="text/css" href="/assets/css/001.css">
-<link rel="stylesheet" href="/assets/css/font-awesome.min.css">
-
-<div class="post_list">
-<ul style="list-style: none;">   
-	{% for item in site.data.settings.etc %}
-	<li> <a href="{{ site.github.url }}/etc{{ item.url }}" title="{{ item.name }}"><img src="/assets/img/file.ico" width="25" height="25" title="{{ item.name }}" />{{ item.name }}</a></li>
- 	{% endfor %}
-</ul>
-</div>
+{{ content }}
