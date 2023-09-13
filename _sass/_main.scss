@@ -24,7 +24,7 @@ body {
 	font-size: 20px;
 }
 
-.wrapper, .content {
+.wrapper, .content , .etc_content{
 	width: 800px;
 	margin: auto;
 	margin-top: 20px;
@@ -114,6 +114,7 @@ ul.topbar {
 	}
 }
 .post_list, .tag_list, .post_content {
+	padding: 3px;
 	background: #fef8fe;
 	border-width: 2px;
 	border-style: ridge groove groove ridge;
