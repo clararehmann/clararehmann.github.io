@@ -1,7 +1,7 @@
 menu:
 - {name: 'about_me', url: '/about_me'}
 - {name: 'research', url: '/research_page'}
-- {name: 'CV', url: '/cv.pdf'}
+- {name: 'CV', url: 'assets/cv.pdf'}
 
 etc:
 - {name: 'aeg', url: '/aeg_page'}
