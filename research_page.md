@@ -1,1 +1,7 @@
-# A test page for research stuff
+# Research
+
+# Spatial population genetics
+
+# Host-parasite coevolution
+
+# Machine learning inference
