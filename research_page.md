@@ -1,5 +1,3 @@
-# Research
-
 # Spatial population genetics
 
 # Host-parasite coevolution
