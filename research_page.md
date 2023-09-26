@@ -1,5 +1,6 @@
-# Spatial population genetics
 
-# Host-parasite coevolution
+## Spatial population genetics
 
-# Machine learning inference
+## Host-parasite coevolution
+
+## Machine learning inference
