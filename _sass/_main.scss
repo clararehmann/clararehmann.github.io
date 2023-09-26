@@ -152,6 +152,37 @@ ul.topbar {
 		}
 	}
 }
+
+.etc_list {
+	margin: 0 auto;
+	overflow-y: scroll;
+
+	ul {
+		list-style: none;
+
+		li {
+			display: inline-block;
+			margin: 10px;
+			max-width: 16ch;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			text-align: center;
+
+			img {
+				display: block;
+				margin: 0 auto;
+				margin-bottom: 8px;
+			}
+
+			a {
+				text-decoration: none;
+				color: #000000;
+			}
+		}
+	}
+}
+
 .tag_list {
 	width: 28%;
 	margin: 0 auto;
