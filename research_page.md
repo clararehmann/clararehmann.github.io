@@ -1,6 +1,10 @@
+---
+layout: research_page
+title: Research
+---
 
-## Spatial population genetics
+# Spatial population genetics
 
-## Host-parasite coevolution
+# Host-parasite coevolution
 
-## Machine learning inference
+# Machine learning inference
