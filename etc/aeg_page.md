@@ -3,12 +3,12 @@ layout: aeg_page
 title: Aeg page
 ---
 
-Aeg is my bearded dragon :)
+A page for Lizard Pictures
 
 Glow up!
 <p float="left">
   <img src="/assets/img/little-aeg.jpg" width="100" />
-  <img src="/assets/img/big-aeg.heic" width="100" /> 
+  <img src="/assets/img/big-aeg.png" width="100" /> 
 </p>
 
 Existensial crisis
