@@ -4,7 +4,7 @@ title: About me
 ---
 
 I'm Clara! I'm a third-year PhD candidate in the [Kern Ralph Co-Lab](https://kr-colab.github.io/) at the University of Oregon. 
-I have a bearded dragon named Aeg, but I mostly code in Python. When I'm off my computer, I enjoy making art, seeing live music, and being outside.
+I mostly code in Python and am raising a bearded dragon named [Aeg](https://clararehmann.github.io/etc/aeg_page). When I'm not on the computer, I enjoy making art, seeing live music, and being outside.
 
 **Research**  I'm primarily interested in studying geographic patterns of genetic variation, and I have a soft spot for infectious disease. 
 I use simulation, statistics, and machine learning to make sense of the evolutionary forces that underlie real data.
