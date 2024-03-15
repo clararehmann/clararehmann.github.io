@@ -43,7 +43,7 @@ title: Aeg page
 
 ##### On the run
 <p float="left">
-  <video width="30%" autoplay muted>
+  <video width="30%" autoplay muted controls loop>
     <source src="/assets/img/run-aeg.MOV">
   </video>
 </p>
