@@ -43,7 +43,9 @@ title: Aeg page
 
 ##### On the run
 <p float="left">
-<video style="margin-left:4px" src="/assets/img/run-aeg.MOV" width="40%">
+  <video width="30%" autoplay muted>
+    <source src="/assets/img/run-aeg.MOV">
+  </video>
 </p>
 
 ##### Going to bed
