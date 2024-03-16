@@ -1,3 +1,8 @@
+---
+layout: default
+title: CV
+---
+
 [PDF version here](https://clararehmann.github.io/assets/crehmann_CV.pdf)
      
 
