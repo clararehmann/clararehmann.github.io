@@ -9,4 +9,4 @@ jkae008, DOI: [10.1093/g3journal/jkae008](https://academic.oup.com/g3journal/adv
 
 * *In prep:* Chevy E, Miseon J, Caudill V, Champer S, Haller B, **Rehmann CR**, Smith CS, Tittes S,
 Messer P, Kern AD, Ramachandran S, Ralph PL. Population genetics meets ecology: a guide to
-simulations in continuous geography. Companion code: [```github.com/kr-colab/spatial_sims_standard```](https://github.com/kr-colab/spatial_sims_standard/)
+simulations in continuous geography. Companion code: [github.com/kr-colab/spatial_sims_standard](https://github.com/kr-colab/spatial_sims_standard/)
