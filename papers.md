@@ -7,10 +7,12 @@ title: Publications
 host-parasite system. G3 Genes—Genomes—Genetics, Volume 14, Issue 3, March 2024,
 jkae008, DOI: [10.1093/g3journal/jkae008](https://academic.oup.com/g3journal/advance-article/doi/10.1093/g3journal/jkae008/7564588)
 
-*In prep:* 
+*Preprints:*
 
 * Chevy E, Miseon J, Caudill V, Champer S, Haller B, **Rehmann CR**, Smith CS, Tittes S,
 Messer P, Kern AD, Ramachandran S, Ralph PL. Population genetics meets ecology: a guide to
-simulations in continuous geography. Companion code: [github.com/kr-colab/spatial_sims_standard](https://github.com/kr-colab/spatial_sims_standard/)
+individual-based simulations in continuous landscapes. DOI: [10.1101/2024.07.24.604988](https://www.biorxiv.org/content/10.1101/2024.07.24.604988v1)
+
+*In prep:* 
 
 * **Rehmann CR**, Ralph PL, Kern AD. In space no one can hear you sweep: a novel signal of selective sweeps in continuous geographic space.
