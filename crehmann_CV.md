@@ -3,7 +3,7 @@ layout: default
 title: CV
 ---
 
-[PDF version here](https://clararehmann.github.io/assets/crehmann_CV.pdf)
+[PDF version here](https://github.com/clararehmann/crehmann-CV/blob/master/crehmann_CV.pdf)
      
 
 # Clara Rehmann
@@ -66,6 +66,12 @@ Experimental work investigating impacts of the loss of aminoacyl-tRNA synthetase
 
 # Teaching Experience
 
+#### Evolutionary Genetics Journal Club *Fall 2024*
+
+Instructor *Department of Biology, University of Oregon*
+
+Organized and facilitated weekly meetings about current publications.
+
 #### Evolutionary Biology *Fall 2023*
 
 Guest Lecturer *Department of Biology, University of Oregon*
@@ -116,6 +122,20 @@ Assisted in instruction of students during lectures and wet and dry lab activiti
 
 # Conferences and Meetings
 
+#### Genetic Epidemiology of Malaria *September 2024*
+
+Wellcome Sanger Institute, Hinxton, United Kingdom
+
+Talk: In space no one can hear you sweep: A novel signal of selective sweeps in continuous
+geographic space
+
+#### SMBE *July 2024*
+
+Society for Molecular Biology and Evolution, Puerto Vallarta, Jalisco, Mexico
+
+Talk: In space no one can hear you sweep: A novel signal of selective sweeps in continuous
+geographic space
+
 #### The Allied Genomics Conference *March 2024*
 
 Genetics Society of America, National Harbor, Maryland, USA
@@ -150,11 +170,21 @@ Poster: Location, location, location: Dissecting errors in machine learning pred
 
 **Rehmann CR**, Ralph PL, Kern AD. Evaluating evidence for co-geography in the Anopheles Plasmodium host-parasite system. G3 Genes—Genomes—Genetics, Volume 14, Issue 3, March 2024, jkae008, DOI: [10.1093/g3journal/jkae008](doi.org/10.1093/g3journal/jkae008)
 
-In prep: Chevy E, Miseon J, Caudill V, Champer S, Haller B, **Rehmann CR**, Smith CS, Tittes S, Messer P, Kern AD, Ramachandran S, Ralph PL. Population genetics meets ecology: a guide to simulations in continuous geography.
+*Preprints:* 
+
+Chevy E, Miseon J, Caudill V, Champer S, Haller B, **Rehmann CR**, Smith CS, Tittes S, Messer P, Kern AD, Ramachandran S, Ralph PL. Population genetics meets ecology: a guide to simulations in continuous geography. DOI: [10.1101/2024.07.24.604988](doi.org/10.1101/2024.07.24.604988)
+
+*In prep:*
+
+**Rehmann CR**, Ralph PL, Kern AD. A novel signal of selective sweeps in continuous geographic space.
 
 # Outreach and Community Involvement
 
-#### Women in Graduate Sciences *Fall 2021 - present*
+#### Women in Graduate Science *Fall 2021 - present*
+
+##### President *Academic Year 2024 - 2025*
+
+Conducting and aiding in organization of WGS meetings and events; collaborating with the Graduate School, UO Foundation, and Associated Students of the UO; promoting the mission of WGS.
 
 ##### Public Relations Chair *Academic Year 2023 - 2024*
 
@@ -184,3 +214,18 @@ Helping plan and organize an annual free public seminar on current topics in bio
 
 #### Society for Molecular Biology and Evolution *Spring 2023 - present*
 
+# Invited talks
+
+#### Malaria Genomics Journal Club *24 September 2024*
+
+Malaria Genomic Epidemiology Network, virtual
+
+Location, location, location: Evaluating evidence for co-geography in the Anopheles Plasmodium
+host-parasite system
+
+#### Lighthouse Lightning Talks *2 February 2024*
+
+Verena Viral Emergence Research Institute, virtual
+
+Location, location, location: Evaluating evidence for co-geography in the Anopheles Plasmodium
+host-parasite system
