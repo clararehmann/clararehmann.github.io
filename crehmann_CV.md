@@ -126,7 +126,7 @@ Assisted in instruction of students during lectures and wet and dry lab activiti
 
 Wellcome Sanger Institute, Hinxton, United Kingdom
 
-Talk: In space no one can hear you sweep: A novel signal of selective sweeps in continuous
+Poster: In space no one can hear you sweep: A novel signal of selective sweeps in continuous
 geographic space
 
 #### SMBE *July 2024*
