@@ -5,6 +5,8 @@ title: Aeg page
 
 # A page for Lizard Pictures
 
+Aeg is a bearded dragon who lives in my apartment.
+
 ##### Glow up
 <p float="left">
   <img src="/assets/img/aeg/little-aeg.jpg" width="40%"/>
