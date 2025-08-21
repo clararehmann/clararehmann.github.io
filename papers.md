@@ -4,7 +4,7 @@ title: Publications
 ---
 
 
-* **Rehmann CR**, Small ST, Ralph PL, Kern AD.
+* **Rehmann CT**, Small ST, Ralph PL, Kern AD.
   \
   Sweeps in space: leveraging geographic data to identify beneficial alleles in *Anopheles gambiae*.
   \
@@ -12,14 +12,14 @@ title: Publications
   DOI: [10.1093/molbev/msaf141](https://doi.org/10.1093/molbev/msaf141)
 
 
-* Chevy E, Miseon J, Caudill V, Champer S, Haller B, **Rehmann CR**, Smith CS, Tittes S, Messer P, Kern AD, Ramachandran S, Ralph PL.
+* Chevy E, Miseon J, Caudill V, Champer S, Haller B, **Rehmann CT**, Smith CS, Tittes S, Messer P, Kern AD, Ramachandran S, Ralph PL.
   \
   Population genetics meets ecology: a guide to individual-based simulations in continuous landscapes.
   \
    Ecology and Evolution, Volume 15, Issue 4, March 2025,
   DOI: [10.1002/ece3.71098](https://doi.org/10.1002/ece3.71098)
 
-* **Rehmann CR**, Ralph PL, Kern AD.
+* **Rehmann CT**, Ralph PL, Kern AD.
   \
   Evaluating evidence for co-geography in the *Anopheles-Plasmodium*
 host-parasite system.
