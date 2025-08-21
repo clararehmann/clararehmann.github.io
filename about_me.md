@@ -3,8 +3,9 @@ layout: about_me
 title: About me
 ---
 
-I'm Clara! I'm a third-year PhD candidate in the [Kern Ralph Co-Lab](https://kr-colab.github.io/) at the University of Oregon. 
-I mostly code in Python and am raising a bearded dragon named [Aeg](https://clararehmann.github.io/etc/aeg_page). When I'm not on the computer, I enjoy making art, going to shows, and being outside.
+I'm Clara! I'm a fourth-year PhD candidate in the [Kern Ralph Co-Lab](https://kr-colab.github.io/) at the University of Oregon. 
+I mostly code in Python and am raising a bearded dragon named [Aeg](https://clararehmann.github.io/etc/aeg_page). 
+When I'm not on the computer, I enjoy making art, going to shows, and being outside.
 
 # Research
 I'm primarily interested in studying geographic patterns of genetic variation, and I have a soft spot for infectious disease. 
@@ -13,7 +14,8 @@ My current projects center around identifying geographic signatures of co-disper
 More generally, I am interested using geographic and genetic data to better understand host-parasite dynamics.
 
 # Other stuff
-I love population genetics and it's important to me to help make the field more inclusive - 
-I hope to help students access and see themselves studying pop gen, as well as 
-help in interrogating how we think and speak about genetic variation in our work.
 
+I've been on the board of [UO Women in Graduate Science](blogs.uoregon.edu/uowgs) for three years
+(and am currently President!).
+I love population genetics and it's important to me to help make the field and science in general more inclusive
+and accessible.
