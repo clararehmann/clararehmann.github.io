@@ -55,7 +55,7 @@ title: Portfolio
 <p float="left">
   <img src="/assets/img/design/sandiego.jpg" width="30%"/>
   <img src="/assets/img/design/ucla.JPG" width="25%"/> 
-    <img src="/assets/img/design/gradschool.JPG" width="37%"/> 
+    <img src="/assets/img/design/gradschool.JPG" width="39%"/> 
 </p>
 
 <!--
