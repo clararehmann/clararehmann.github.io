@@ -57,7 +57,7 @@ body {
   font-family: "EspySans", "VT323", "Courier New", monospace;
   font-weight: 400;
   font-size: 12px;
-  background: var(--mac-desktop);
+  background: var(--mac-desktop) url("assets/img/wallpaper.jpg") repeat;
   color: var(--mac-black);
   width: 50vw;
   height: 50vh;
@@ -99,7 +99,7 @@ body {
 #desktop {
   position: fixed;
   top: 20px; left: 0; right: 0; bottom: 0;
-  background: var(--mac-desktop);
+  background: var(--mac-desktop) url("assets/img/wallpaper.jpg") repeat;
   overflow: hidden;
 }
 
