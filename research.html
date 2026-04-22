@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!-- research.html — Research page
+     CONTENT FILE: edit the `projects` array in the <script> block below to update research areas.
+     DESIGN FILE:  edit mac-styles.css to change the visual layout. -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research — Clara Rehmann</title>
+<link rel="stylesheet" href="mac-styles.css">
+</head>
+<body>
+
+<!-- MENU BAR (populated by mac-components.js) -->
+<div id="menubar"></div>
+
+<!-- DESKTOP -->
+<div id="desktop">
+
+
+  <!-- Research Window -->
+  <div class="window" id="research-window" style="left: 10px; top: 10px; width: calc(50vw - 90px);">
+    <div class="window-titlebar" onmousedown="startDrag(event, 'research-window')">
+      <div class="titlebar-btn" onclick="window.location.href='index.html'" title="Close"></div>
+      <div class="titlebar-btn" title="Zoom"></div>
+      <div class="window-title">Research — Clara Rehmann</div>
+    </div>
+    <div class="window-toolbar">
+      <button class="toolbar-btn" onclick="window.location.href='index.html'">&#9664; Home</button>
+      <div class="toolbar-separator"></div>
+      <button class="toolbar-btn" onclick="window.location.href='publications.html'">Publications</button>
+      <div class="toolbar-separator"></div>
+      <span style="font-size:11px; color:#444;">Research Areas</span>
+    </div>
+    <div class="window-content" style="height: calc(50vh - 112px);">
+      <div class="icon-grid-panel">
+        <div class="icon-grid" id="icon-grid">
+          <!-- populated by JS from the projects array below -->
+        </div>
+      </div>
+      <div class="detail-panel" id="detail-panel">
+        <div class="detail-empty">
+          <div class="detail-empty-icon">
+            <img src="assets/img/icons/folder.png" alt="" style="width:48px;height:48px;opacity:0.3;image-rendering:pixelated;">
+          </div>
+          <div>Select a research area<br>to view details</div>
+        </div>
+      </div>
+    </div>
+    <div class="window-statusbar">
+      <span id="item-count">3 items</span>
+      <div class="statusbar-divider"></div>
+      <span id="status-text">Click a folder to view project details</span>
+    </div>
+    <div class="resize-handle"></div>
+  </div>
+
+  <!-- Sidebar visible as part of the finder-sidebar approach on other pages;
+       here we use the icon grid + detail panel layout instead -->
+
+</div>
+
+
+<!-- ============================================================ -->
+<!-- CONTENT — edit the `projects` array to update research areas -->
+<!-- ============================================================ -->
+<script>
+const projects = [
+  {
+    id: 'spatial',
+    icon: 'icons/spatial.png',
+    name: 'Spatial Pop. Gen.',
+    fullName: 'Spatial Population Genetics',
+    tags: ['simulation', 'SLiM', 'spatial structure', 'natural selection'],
+    desc: `Geography has a huge impact on how genetic variation is shared within populations. This can confound standard population genetics methods, but also provides another axis of information we can use to understand evolutionary processes. I use recent developments in <a href="https://github.com/kr-colab/spatial_sims_standard/" target="_blank">continuous-space simulation</a> to model how spatial population structure affects the dynamics of natural selection. With a better understanding of how spatial processes impact patterns of variation, we can understand more about the evolutionary past — and present — of a population!`,
+    details: [
+      { label: 'Status', val: 'Ongoing' },
+      { label: 'Methods', val: 'SLiM, Python, machine learning' },
+      { label: 'Published', val: '<a href="https://doi.org/10.1093/g3journal/jkae008" target="_blank">G3 2024</a>, <a href="https://doi.org/10.1093/molbev/msaf141" target="_blank">MBE 2025</a>, <a href="https://doi.org/10.1002/ece3.71098" target="_blank">Ecol Evol 2025</a>' },
+    ]
+  },
+  {
+    id: 'ml',
+    icon: 'icons/ML.png',
+    name: 'ML Inference',
+    fullName: 'Machine Learning Inference',
+    tags: ['machine learning', 'genomics', 'spatial data', 'bias'],
+    desc: `AI might not replace artists, but it could be good for looking at genomes — applying machine learning methods to population genetic datasets is just as, if not more, useful than standard methods. I'm interested in incorporating spatial data into our methods of machine learning on genomes and uncovering how this dimension of data can help in identifying evolutionary processes. Population genetic data isn't without bias, however, and I'm also focused on how our approaches to building ML models and analyzing datasets can impact our results.`,
+    details: [
+      { label: 'Status', val: 'Ongoing' },
+      { label: 'Methods', val: 'CNN, simulation-based inference' },
+      { label: 'Published', val: '<a href="https://doi.org/10.1093/g3journal/jkae008" target="_blank">G3 2024</a>' },
+    ]
+  },
+  {
+    id: 'hostpara',
+    icon: 'icons/mosquito.png',
+    name: 'Vector Genomics',
+    fullName: 'Evolutionary Genomics of Disease Vectors',
+    tags: ['malaria', 'Anopheles', 'Plasmodium'],
+    desc: `I have a soft spot for infectious disease, particularly zoonotic and vector-borne pathogens. My current research is all based in simulation, inference, and theory, but I focus on applying my findings to the malaria vector <em>Anopheles gambiae</em> and its parasite <em>Plasmodium falciparum</em>. I'm always looking for more chances to investigate other disease systems as well!`,
+    details: [
+      { label: 'Status', val: 'Ongoing' },
+      { label: 'System', val: 'Anopheles–Plasmodium' },
+      { label: 'Published', val: '<a href="https://doi.org/10.1093/g3journal/jkae008" target="_blank">G3 2024</a>, <a href="https://doi.org/10.1093/molbev/msaf141" target="_blank">MBE 2025</a>' },
+    ]
+  }
+];
+</script>
+<!-- ============================================================ -->
+<!-- END CONTENT                                                   -->
+<!-- ============================================================ -->
+
+<script>
+// Render icon grid
+const grid = document.getElementById('icon-grid');
+projects.forEach(p => {
+  const el = document.createElement('div');
+  el.className = 'file-icon';
+  el.id = 'icon-' + p.id;
+  el.innerHTML = `
+    <div class="file-icon-img"><img src="${p.icon}" alt="${p.name}"></div>
+    <div class="file-icon-label">${p.name}</div>
+  `;
+  el.addEventListener('click', () => selectProject(p.id));
+  grid.appendChild(el);
+});
+
+function selectProject(id) {
+  document.querySelectorAll('.file-icon').forEach(i => i.classList.remove('selected'));
+  document.getElementById('icon-' + id).classList.add('selected');
+  const p = projects.find(x => x.id === id);
+  document.getElementById('status-text').textContent = p.fullName || p.name;
+
+  const tagsHtml = p.tags.map(t => `<span class="detail-tag">${t}</span>`).join('');
+  const detailsHtml = p.details.map(d =>
+    `<div class="info-row"><span class="info-label">${d.label}:</span><span>${d.val}</span></div>`
+  ).join('');
+
+  document.getElementById('detail-panel').innerHTML = `
+    <div class="detail-header">
+      <div class="detail-icon"><img src="${p.icon}" alt="" style="width:36px;height:36px;image-rendering:pixelated;"></div>
+      <div>
+        <div class="detail-title">${p.fullName || p.name}</div>
+        <div style="margin-top:4px;">${tagsHtml}</div>
+      </div>
+    </div>
+    <div class="detail-desc">${p.desc}</div>
+    <div class="info-box">
+      <div class="info-box-title">Project Details</div>
+      ${detailsHtml}
+    </div>
+  `;
+}
+</script>
+
+<script src="mac-components.js"></script>
+<script>MacComponents.init({ page: 'research' });</script>
+<script src="mac-chrome.js"></script>
+</body>
+</html>

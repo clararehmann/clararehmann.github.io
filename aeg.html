@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!-- aeg.html — Aeg the bearded dragon photo page
+     CONTENT FILE: edit the `slides` array below to add/update photos.
+     Use ◀ ▶ buttons or arrow keys to navigate. -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aeg — Clara Rehmann</title>
+<link rel="stylesheet" href="mac-styles.css">
+</head>
+<body>
+
+<!-- MENU BAR (populated by mac-components.js) -->
+<div id="menubar"></div>
+
+<!-- DESKTOP -->
+<div id="desktop">
+
+  <!-- Aeg Window -->
+  <div class="window" id="aeg-window" style="left: 10px; top: 10px; width: calc(50vw - 90px);">
+    <div class="window-titlebar" onmousedown="startDrag(event, 'aeg-window')">
+      <div class="titlebar-btn" onclick="window.location.href='fun.html'" title="Close"></div>
+      <div class="titlebar-btn" title="Zoom"></div>
+      <div class="window-title">Aeg</div>
+    </div>
+    <div class="window-toolbar">
+      <button class="toolbar-btn" onclick="window.location.href='fun.html'">&#9664; Fun Stuff</button>
+      <div class="toolbar-separator"></div>
+      <button class="toolbar-btn" onclick="galleryPrev()">&#9664;</button>
+      <button class="toolbar-btn" onclick="galleryNext()">&#9654;</button>
+      <div class="toolbar-separator"></div>
+      <button class="toolbar-btn" onclick="window.location.href='art.html'">Art Portfolio</button>
+    </div>
+    <div class="window-content" style="height: calc(50vh - 112px);">
+      <div class="finder-main gallery-viewer">
+        <div id="gallery-slide" style="width:100%; text-align:center;"></div>
+      </div>
+    </div>
+    <div class="window-statusbar">
+      <span id="gallery-counter">1 / 9</span>
+      <div class="statusbar-divider"></div>
+      <span id="gallery-title">Aeg's photo album</span>
+    </div>
+    <div class="resize-handle"></div>
+  </div>
+
+</div>
+
+
+<!-- ============================================================ -->
+<!-- CONTENT — edit the `slides` array to add/update Aeg photos  -->
+<!-- Photo paths: assets/img/aeg/ -->
+<!-- ============================================================ -->
+<script>
+const slides = [
+  { title: 'Glow up', row: [
+    { src: 'assets/img/aeg/little-aeg.jpg', alt: 'Little Aeg' },
+    { src: 'assets/img/aeg/big-aeg.png',    alt: 'Big Aeg' },
+  ]},
+  { title: 'Existential crisis', src: 'assets/img/aeg/crisis-aeg.JPG',  alt: 'Crisis Aeg' },
+  { title: 'Ally 🏳️‍🌈',            src: 'assets/img/aeg/pride-aeg.JPG',  alt: 'Pride Aeg' },
+  { title: 'Debugging',            src: 'assets/img/aeg/coding-aeg.JPG', alt: 'Coding Aeg' },
+  { title: 'Plotting an escape',   src: 'assets/img/aeg/escape-aeg.JPG', alt: 'Escape Aeg' },
+  { title: 'Aegs on Film',         src: 'assets/img/aeg/onfilm-aeg.JPG', alt: 'On Film Aeg' },
+  { title: 'Yee haw 🤠',           src: 'assets/img/aeg/cowboy-aeg.JPG', alt: 'Cowboy Aeg' },
+  { title: 'Repose',               src: 'assets/img/aeg/repose-aeg.JPG', alt: 'Repose Aeg' },
+  { title: 'Going to bed',         src: 'assets/img/aeg/bedtime-aeg.jpg', alt: 'Bedtime Aeg' },
+];
+</script>
+<!-- ============================================================ -->
+<!-- END CONTENT                                                   -->
+<!-- ============================================================ -->
+
+<script>
+let current = 0;
+
+function renderSlide() {
+  const s = slides[current];
+  document.getElementById('gallery-counter').textContent = (current + 1) + ' / ' + slides.length;
+  document.getElementById('gallery-title').textContent = s.title;
+
+  let imgHtml;
+  if (s.src) {
+    imgHtml = `<img class="gallery-img" src="${s.src}" alt="${s.alt}">`;
+  } else if (s.row) {
+    imgHtml = `<div class="gallery-row">${s.row.map(i => `<img class="gallery-img" src="${i.src}" alt="${i.alt}">`).join('')}</div>`;
+  }
+
+  document.getElementById('gallery-slide').innerHTML =
+    `<div class="gallery-slide-title">${s.title}</div>${imgHtml}`;
+}
+
+function galleryPrev() {
+  current = (current - 1 + slides.length) % slides.length;
+  renderSlide();
+}
+
+function galleryNext() {
+  current = (current + 1) % slides.length;
+  renderSlide();
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'ArrowLeft')  galleryPrev();
+  if (e.key === 'ArrowRight') galleryNext();
+});
+
+renderSlide();
+</script>
+
+<script src="mac-components.js"></script>
+<script>MacComponents.init({ page: 'aeg' });</script>
+<script src="mac-chrome.js"></script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!-- cv.html — Curriculum Vitae page
+     CONTENT FILE: edit the marked section below to update your CV.
+     DESIGN FILE:  edit mac-styles.css to change the visual layout.
+     PDF link: update the href in the cv-pdf-link button below. -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV — Clara Rehmann</title>
+<link rel="stylesheet" href="mac-styles.css">
+</head>
+<body>
+
+<!-- MENU BAR (populated by mac-components.js) -->
+<div id="menubar">
+</div>
+
+<!-- DESKTOP -->
+<div id="desktop">
+
+
+  <!-- CV Window -->
+  <div class="window" id="cv-window" style="left: 10px; top: 10px; width: calc(50vw - 90px);">
+    <div class="window-titlebar" onmousedown="startDrag(event, 'cv-window')">
+      <div class="titlebar-btn" onclick="window.location.href='index.html'" title="Close"></div>
+      <div class="titlebar-btn" title="Zoom"></div>
+      <div class="window-title">CV — Clara Rehmann</div>
+    </div>
+    <div class="window-content" style="height: calc(50vh - 82px);">
+
+      <!-- Sidebar -->
+      <!-- Sidebar (populated by mac-components.js) -->
+      <div class="finder-sidebar"></div>
+
+      <!-- ============================================================ -->
+      <!-- CONTENT — edit below to update your CV                       -->
+      <!-- ============================================================ -->
+      <div class="finder-main">
+
+        <a class="cv-pdf-link" href="https://github.com/clararehmann/crehmann-CV/blob/master/crehmann_CV.pdf" target="_blank">
+          <img src="assets/img/icons/file.png" alt="" style="width:12px;height:12px;vertical-align:middle;margin-right:4px;image-rendering:pixelated;">
+          Download PDF version
+        </a>
+
+        <!-- EDUCATION -->
+        <div class="cv-section">
+          <div class="cv-section-title">Education</div>
+          <div class="cv-entry">
+            <div class="cv-entry-title">Ph.D. Ecology and Evolutionary Biology</div>
+            <div class="cv-entry-meta">University of Oregon, Eugene, OR — September 2021–present</div>
+            <div class="cv-entry-desc">Advisor: Dr. Andrew Kern</div>
+          </div>
+          <div class="cv-entry">
+            <div class="cv-entry-title">Bachelor of Science, Biology</div>
+            <div class="cv-entry-meta">University of Oregon, Eugene, OR — September 2018–June 2020</div>
+          </div>
+          <div class="cv-entry">
+            <div class="cv-entry-meta">University of California, Los Angeles, CA — September 2017–June 2018</div>
+          </div>
+        </div>
+
+        <!-- RESEARCH EXPERIENCE -->
+        <div class="cv-section">
+          <div class="cv-section-title">Research Experience</div>
+          <div class="cv-entry">
+            <div class="cv-entry-title">Spatial dynamics of selective sweeps</div>
+            <div class="cv-entry-meta">Advisor: Dr. Andrew Kern, University of Oregon — September 2022–present</div>
+            <div class="cv-entry-desc">Simulation-based research for PhD dissertation investigating the effects of spatial population structure on selective sweeps.</div>
+          </div>
+          <div class="cv-entry">
+            <div class="cv-entry-title">Machine learning inference of location from genetic data</div>
+            <div class="cv-entry-meta">Advisor: Dr. Andrew Kern, University of Oregon — June 2020–present</div>
+            <div class="cv-entry-desc">Simulation-based research investigating the impact of spatially-biased training data on machine learning inference of location from genetic data.</div>
+          </div>
+          <div class="cv-entry">
+            <div class="cv-entry-title">Cross-species analysis of transcription expression</div>
+            <div class="cv-entry-meta">Advisor: Dr. William Cresko, University of Oregon — March 2022–June 2022</div>
+            <div class="cv-entry-desc">Rotation project assessing the effects of cross-species scRNA-seq integration methods on analysis outcomes.</div>
+          </div>
+          <div class="cv-entry">
+            <div class="cv-entry-title">Modeling high-order epistasis in populations</div>
+            <div class="cv-entry-meta">Advisor: Dr. Michael Harms, University of Oregon — September 2021–December 2021</div>
+            <div class="cv-entry-desc">Rotation project simulating population-level evolutionary trajectories across fitness landscapes.</div>
+          </div>
+          <div class="cv-entry">
+            <div class="cv-entry-title">Bacterial-host evolutionary conflict</div>
+            <div class="cv-entry-meta">Advisor: Dr. Matthew Barber, University of Oregon — April 2020–June 2021</div>
+            <div class="cv-entry-desc">Computational and experimental work investigating coevolutionary dynamics between the primate immune system and bacteria.</div>
+          </div>
+          <div class="cv-entry">
+            <div class="cv-entry-title">Fitness effects of inaccurate translation</div>
+            <div class="cv-entry-meta">Advisor: Dr. Beth Lazazzera, UCLA — September 2017–June 2018</div>
+            <div class="cv-entry-desc">Experimental work investigating impacts of the loss of aminoacyl-tRNA synthetase editing on <em>E. coli</em> fitness.</div>
+          </div>
+        </div>
+
+        <!-- PUBLICATIONS -->
+        <div class="cv-section">
+          <div class="cv-section-title">Publications</div>
+          <div class="cv-entry">
+            <div class="cv-entry-desc"><strong>Rehmann CT</strong>, Small ST, Ralph PL, Kern AD. Sweeps in space: leveraging geographic data to identify beneficial alleles in <em>Anopheles gambiae</em>. <em>Molecular Biology and Evolution</em>, 42(6), msaf141, 2025. DOI: <a href="https://doi.org/10.1093/molbev/msaf141" target="_blank">10.1093/molbev/msaf141</a></div>
+          </div>
+          <div class="cv-entry">
+            <div class="cv-entry-desc">Chevy E, Miseon J, Caudill V, Champer S, Haller B, <strong>Rehmann CT</strong>, Smith CS, Tittes S, Messer P, Kern AD, Ramachandran S, Ralph PL. Population genetics meets ecology: a guide to individual-based simulations in continuous landscapes. <em>Ecology and Evolution</em>, 15(4), e71098, 2025. DOI: <a href="https://doi.org/10.1002/ece3.71098" target="_blank">10.1002/ece3.71098</a></div>
+          </div>
+          <div class="cv-entry">
+            <div class="cv-entry-desc"><strong>Rehmann CT</strong>, Ralph PL, Kern AD. Evaluating evidence for co-geography in the <em>Anopheles</em>–<em>Plasmodium</em> host-parasite system. <em>G3 Genes|Genomes|Genetics</em>, 14(3), jkae008, 2024. DOI: <a href="https://doi.org/10.1093/g3journal/jkae008" target="_blank">10.1093/g3journal/jkae008</a></div>
+          </div>
+          <div class="cv-entry">
+            <div class="cv-entry-meta">In press at Molecular Biology and Evolution:</div>
+            <div class="cv-entry-desc">Gower G, Pope NS, ..., <strong>Rehmann CT</strong>, ..., Ralph PL, Kern AD. Accessible, realistic genome simulation with selection using stdpopsim. Preprint, March 2025. DOI: <a href="https://doi.org/10.1101/2025.03.23.644823" target="_blank">10.1101/2025.03.23.644823</a></div>
+          </div>
+        </div>
+
+        <!-- TEACHING -->
+        <div class="cv-section">
+          <div class="cv-section-title">Teaching Experience</div>
+          <div class="cv-entry">
+            <div class="cv-entry-title">Evolutionary Genetics Journal Club</div>
+            <div class="cv-entry-meta">Instructor, Dept. of Biology, UO — Fall 2024–present</div>
+            <div class="cv-entry-desc">Organized and facilitated weekly meetings about current publications.</div>
+          </div>
+          <div class="cv-entry">
+            <div class="cv-entry-title">Evolutionary Biology</div>
+            <div class="cv-entry-meta">Guest Lecturer, Dept. of Biology, UO — Fall 2023, Fall 2022</div>
+          </div>
+          <div class="cv-entry">
+            <div class="cv-entry-title">Computational Genetics</div>
+            <div class="cv-entry-meta">Guest Lecturer, Dept. of Biology, UO — Spring 2023</div>
+          </div>
+          <div class="cv-entry">
+            <div class="cv-entry-title">General Biology IV Mechanisms</div>
+            <div class="cv-entry-meta">Graduate Employee, UO — Spring 2022</div>
+          </div>
+          <div class="cv-entry">
+            <div class="cv-entry-title">Immunology and Infectious Disease</div>
+            <div class="cv-entry-meta">Graduate Employee, UO — Winter 2022</div>
+          </div>
+          <div class="cv-entry">
+            <div class="cv-entry-title">Evolutionary Biology</div>
+            <div class="cv-entry-meta">Graduate Employee, UO — Fall 2021</div>
+          </div>
+        </div>
+
+        <!-- CONFERENCES -->
+        <div class="cv-section">
+          <div class="cv-section-title">Conferences &amp; Meetings</div>
+          <div class="cv-entry">
+            <div class="cv-entry-title">Genetic Epidemiology of Malaria — Poster</div>
+            <div class="cv-entry-meta">Wellcome Sanger Institute, Hinxton, UK — September 2024</div>
+            <div class="cv-entry-desc"><em>In space no one can hear you sweep: A novel signal of selective sweeps in continuous geographic space</em></div>
+          </div>
+          <div class="cv-entry">
+            <div class="cv-entry-title">SMBE — Talk</div>
+            <div class="cv-entry-meta">Puerto Vallarta, Mexico — July 2024</div>
+          </div>
+          <div class="cv-entry">
+            <div class="cv-entry-title">Allied Genomics Conference — Poster</div>
+            <div class="cv-entry-meta">National Harbor, MD — March 2024</div>
+          </div>
+          <div class="cv-entry">
+            <div class="cv-entry-title">SMBE — Poster</div>
+            <div class="cv-entry-meta">Ferrara, Italy — July 2023</div>
+          </div>
+          <div class="cv-entry">
+            <div class="cv-entry-title">EVO-WIBO — Poster</div>
+            <div class="cv-entry-meta">Port Townsend, WA — April 2023</div>
+          </div>
+          <div class="cv-entry">
+            <div class="cv-entry-title">Population, Evolutionary, and Quantitative Genetics — Poster</div>
+            <div class="cv-entry-meta">Asilomar, CA — June 2022</div>
+          </div>
+        </div>
+
+        <!-- OUTREACH -->
+        <div class="cv-section">
+          <div class="cv-section-title">Outreach &amp; Service</div>
+          <div class="cv-entry">
+            <div class="cv-entry-title">Women in Graduate Science — President</div>
+            <div class="cv-entry-meta">University of Oregon — AY 2024–2025</div>
+            <div class="cv-entry-desc">Conducting and aiding in organization of WGS meetings and events; collaborating with the Graduate School, UO Foundation, and ASUO.</div>
+          </div>
+          <div class="cv-entry">
+            <div class="cv-entry-title">Women in Graduate Science — Public Relations Chair</div>
+            <div class="cv-entry-meta">University of Oregon — AY 2023–2024</div>
+          </div>
+          <div class="cv-entry">
+            <div class="cv-entry-title">GrEBES — SPECIE2S Chair</div>
+            <div class="cv-entry-meta">University of Oregon — Fall 2023–present</div>
+            <div class="cv-entry-desc">Organizing and facilitating weekly writing groups and peer feedback sessions for graduate students.</div>
+          </div>
+          <div class="cv-entry">
+            <div class="cv-entry-title">GrEBES — Seminar Committee</div>
+            <div class="cv-entry-meta">University of Oregon — AY 2022–2023, 2023–2024, 2024–2025</div>
+          </div>
+        </div>
+
+      </div>
+      <!-- ============================================================ -->
+      <!-- END CONTENT                                                   -->
+      <!-- ============================================================ -->
+
+    </div>
+    <div class="window-statusbar">
+      <span>crehmann_CV</span>
+      <div class="statusbar-divider"></div>
+      <span>Updated 2025</span>
+    </div>
+    <div class="resize-handle"></div>
+  </div>
+
+</div>
+
+
+<script src="mac-components.js"></script>
+<script>MacComponents.init({ page: 'cv' });</script>
+<script src="mac-chrome.js"></script>
+</body>
+</html>

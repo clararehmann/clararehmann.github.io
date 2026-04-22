@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!-- fun.html — Fun Stuff hub page
+     CONTENT FILE: edit the folder grid below to add/update fun pages.
+     DESIGN FILE:  edit mac-styles.css to change the visual layout. -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fun Stuff — Clara Rehmann</title>
+<link rel="stylesheet" href="mac-styles.css">
+</head>
+<body>
+
+<!-- MENU BAR (populated by mac-components.js) -->
+<div id="menubar">
+</div>
+
+<!-- DESKTOP -->
+<div id="desktop">
+
+  <!-- Fun Stuff Window -->
+  <div class="window" id="fun-window" style="left: 10px; top: 10px; width: calc(50vw - 90px);">
+    <div class="window-titlebar" onmousedown="startDrag(event, 'fun-window')">
+      <div class="titlebar-btn" onclick="window.location.href='index.html'" title="Close"></div>
+      <div class="titlebar-btn" title="Zoom"></div>
+      <div class="window-title">Fun Stuff — Clara Rehmann</div>
+    </div>
+    <div class="window-content" style="height: calc(50vh - 82px);">
+
+      <!-- Sidebar -->
+      <!-- Sidebar (populated by mac-components.js) -->
+      <div class="finder-sidebar"></div>
+
+      <!-- ============================================================ -->
+      <!-- CONTENT — edit below to add/change fun pages                 -->
+      <!-- ============================================================ -->
+      <div class="finder-main" style="padding: 8px;">
+
+        <div style="font-size:11px; color:#555; margin-bottom:10px; padding:6px; background:var(--mac-gray); border:1px inset var(--bevel-dark);">
+          3 items — double-click a folder to open
+        </div>
+
+        <div class="fun-grid">
+
+          <div class="fun-icon" ondblclick="window.location.href='aeg.html'">
+            <div class="fun-icon-img">
+              <img src="icons/aeg-icon.png" alt="Aeg">
+            </div>
+            <div class="fun-icon-label">Aeg</div>
+          </div>
+
+          <div class="fun-icon" ondblclick="window.location.href='art.html'">
+            <div class="fun-icon-img">
+              <img src="icons/art.png" alt="Art Portfolio">
+            </div>
+            <div class="fun-icon-label">Art Portfolio</div>
+          </div>
+
+          <div class="fun-icon" ondblclick="window.location.href='spotify.html'">
+            <div class="fun-icon-img">
+              <img src="icons/music.png" alt="Spotify">
+            </div>
+            <div class="fun-icon-label">Spotify</div>
+          </div>
+
+        </div>
+
+      </div>
+      <!-- ============================================================ -->
+      <!-- END CONTENT                                                   -->
+      <!-- ============================================================ -->
+
+    </div>
+    <div class="window-statusbar">
+      <span>3 items</span>
+      <div class="statusbar-divider"></div>
+      <span>Double-click to open</span>
+    </div>
+    <div class="resize-handle"></div>
+  </div>
+
+</div>
+
+
+<script src="mac-components.js"></script>
+<script>MacComponents.init({ page: 'fun' });</script>
+<script src="mac-chrome.js"></script>
+</body>
+</html>

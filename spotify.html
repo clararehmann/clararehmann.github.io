@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!-- spotify.html — Spotify page
+     CONTENT FILE: edit the embed src URL below to link to your playlist or profile.
+     To get a Spotify embed URL:
+       1. Open Spotify and find your playlist or profile
+       2. Click "..." → Share → Copy embed code
+       3. Paste the iframe src URL into the embed below
+     DESIGN FILE:  edit mac-styles.css to change the visual layout. -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spotify — Clara Rehmann</title>
+<link rel="stylesheet" href="mac-styles.css">
+<style>
+  .spotify-frame {
+    border: 1px solid var(--mac-black);
+    border-top-color: var(--bevel-dark);
+    border-left-color: var(--bevel-dark);
+    border-bottom-color: var(--bevel-light);
+    border-right-color: var(--bevel-light);
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .now-playing-label {
+    font-size: 10px;
+    color: #444;
+    margin-bottom: 4px;
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+
+<!-- MENU BAR (populated by mac-components.js) -->
+<div id="menubar">
+</div>
+
+<!-- DESKTOP -->
+<div id="desktop">
+
+  <!-- Spotify Window -->
+  <div class="window" id="spotify-window" style="left: 10px; top: 10px; width: calc(50vw - 90px);">
+    <div class="window-titlebar" onmousedown="startDrag(event, 'spotify-window')">
+      <div class="titlebar-btn" onclick="window.location.href='fun.html'" title="Close"></div>
+      <div class="titlebar-btn" title="Zoom"></div>
+      <div class="window-title">Spotify</div>
+    </div>
+    <div class="window-toolbar">
+      <button class="toolbar-btn" onclick="window.location.href='fun.html'">&#9664; Fun Stuff</button>
+      <div class="toolbar-separator"></div>
+      <button class="toolbar-btn" onclick="window.location.href='aeg.html'">Aeg</button>
+      <div class="toolbar-separator"></div>
+      <button class="toolbar-btn" onclick="window.location.href='art.html'">Art</button>
+    </div>
+    <div class="window-content" style="height: calc(50vh - 112px);">
+      <div class="finder-main">
+
+        <!-- ============================================================ -->
+        <!-- CONTENT — replace the iframe src with your Spotify embed URL -->
+        <!-- ============================================================ -->
+
+        <div style="font-size:13px; font-weight:bold; margin-bottom:8px;">
+          <img src="icons/music.png" alt=""
+               style="width:14px;height:14px;vertical-align:middle;margin-right:4px;image-rendering:pixelated;">
+          What I'm listening to
+        </div>
+
+        <div class="now-playing-label">
+          Check out my latest grooves!
+        </div>
+
+        <!-- SPOTIFY EMBED — update the src URL to your playlist/profile -->
+        <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 5; border-radius:12px"><a href="https://open.spotify.com/user/clararehmann" data-iframely-url="https://iframely.net/52jJwYQV?theme=dark"></a></div></div><script async src="https://iframely.net/embed.js"></script>
+        <div class="info-box" style="margin-top:6px;">
+          <div class="info-box-title">
+            <img src="icons/music.png" alt=""
+                 style="width:12px;height:12px;vertical-align:middle;margin-right:4px;image-rendering:pixelated;">
+            Now playing
+          </div>
+          <div class="info-row" style="display:block; line-height:1.8; font-size:11px;">
+            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3np5pvRLF63wj1rksHtGQj?utm_source=generator&theme=0" width="49%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7mBgrICckDI39qIcDmC2IG?utm_source=generator&theme=0" width="49%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7BFtQXVAvuBtZzCj15ia4R?utm_source=generator&theme=0" width="49%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5eCM5ajtW1z9eBggvhpd2P?utm_source=generator&theme=0" width="49%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- END CONTENT                                                   -->
+        <!-- ============================================================ -->
+
+      </div>
+    </div>
+    <div class="window-statusbar">
+      <span>
+        <img src="icons/music.png" alt=""
+             style="width:10px;height:10px;vertical-align:middle;image-rendering:pixelated;">
+        Spotify
+      </span>
+      <div class="statusbar-divider"></div>
+      <span>Now playing</span>
+    </div>
+    <div class="resize-handle"></div>
+  </div>
+
+</div>
+
+
+<script src="mac-components.js"></script>
+<script>MacComponents.init({ page: 'spotify' });</script>
+<script src="mac-chrome.js"></script>
+</body>
+</html>

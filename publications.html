@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<!-- publications.html — Publications page
+     CONTENT FILE: edit the `publications` array in the <script> block below to add/update papers.
+     DESIGN FILE:  edit mac-styles.css to change the visual layout. -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Publications — Clara Rehmann</title>
+<link rel="stylesheet" href="mac-styles.css">
+</head>
+<body>
+
+<!-- MENU BAR (populated by mac-components.js) -->
+<div id="menubar">
+</div>
+
+<!-- DESKTOP -->
+<div id="desktop">
+
+
+  <!-- Publications Window -->
+  <div class="window" id="pub-window" style="left: 10px; top: 10px; width: calc(50vw - 90px);">
+    <div class="window-titlebar" onmousedown="startDrag(event, 'pub-window')">
+      <div class="titlebar-btn" onclick="window.location.href='index.html'" title="Close"></div>
+      <div class="titlebar-btn" title="Zoom"></div>
+      <div class="window-title">Publications — Clara Rehmann</div>
+    </div>
+    <div class="window-toolbar">
+      <button class="toolbar-btn" onclick="window.location.href='index.html'">&#9664; Home</button>
+      <div class="toolbar-separator"></div>
+      <button class="toolbar-btn" onclick="window.location.href='research.html'">Research</button>
+      <div class="toolbar-separator"></div>
+      <span style="font-size:11px; color:#444;" id="filter-label">All publications</span>
+      <div class="toolbar-search">
+        <span style="font-size:11px;">&#128269;</span>
+        <input type="text" id="search-box" placeholder="Search..." oninput="filterPubs()">
+      </div>
+    </div>
+    <div class="window-content" style="height: calc(50vh - 112px);">
+      <div style="overflow-y:auto; width:100%; height:100%;">
+        <div class="list-header">
+          <div class="col-header col-icon"></div>
+          <div class="col-header col-title" onclick="sortBy('title')" id="hdr-title">Title</div>
+          <div class="col-header col-year"   onclick="sortBy('year')"  id="hdr-year">Year</div>
+          <div class="col-header col-journal" onclick="sortBy('journal')" id="hdr-journal">Journal</div>
+          <div class="col-header col-type"   onclick="sortBy('type')"  id="hdr-type">Type</div>
+          <div class="col-header col-link">Link</div>
+        </div>
+        <div class="list-body" id="pub-list"></div>
+      </div>
+    </div>
+    <div class="window-statusbar">
+      <span id="status-count">4 items</span>
+      <div class="statusbar-divider"></div>
+      <span id="status-selected">No selection</span>
+      <div class="statusbar-divider"></div>
+      <span>Double-click a row to view details</span>
+    </div>
+    <div class="resize-handle"></div>
+  </div>
+
+  <!-- Detail popup -->
+  <div class="detail-popup" id="detail-popup">
+    <div class="detail-popup-titlebar" onmousedown="startDrag(event, 'detail-popup')">
+      <div class="titlebar-btn" onclick="document.getElementById('detail-popup').classList.remove('visible')"></div>
+      <div class="detail-popup-title">Get Info</div>
+    </div>
+    <div class="detail-popup-content" id="detail-popup-content"></div>
+  </div>
+
+</div>
+
+
+<!-- ============================================================ -->
+<!-- CONTENT — edit the `publications` array to add/update papers -->
+<!-- icon: 📄 for article, 📝 for preprint, 📋 for review        -->
+<!-- type: 'Article', 'Preprint', 'In press'                      -->
+<!-- ============================================================ -->
+<script>
+const publications = [
+  {
+    id: 'p1',
+    icon: '<img src="icons/file.ico" style="height: 1em; width: 1em;">',
+    title: 'Sweeps in space: leveraging geographic data to identify beneficial alleles in Anopheles gambiae',
+    authors: 'Rehmann CT, Small ST, Ralph PL, Kern AD',
+    year: 2025,
+    journal: 'Mol Biol Evol',
+    type: 'Article',
+    doi: 'https://doi.org/10.1093/molbev/msaf141',
+  },
+  {
+    id: 'p2',
+    icon: '<img src="icons/file.ico" style="height: 1em; width: 1em;">',
+    title: 'Population genetics meets ecology: a guide to individual-based simulations in continuous landscapes',
+    authors: 'Chevy E, Miseon J, Caudill V, Champer S, Haller B, Rehmann CT, Smith CS, Tittes S, Messer P, Kern AD, Ramachandran S, Ralph PL',
+    year: 2025,
+    journal: 'Ecol Evol',
+    type: 'Article',
+    doi: 'https://doi.org/10.1002/ece3.71098',
+  },
+  {
+    id: 'p3',
+    icon: '<img src="icons/file.ico" style="height: 1em; width: 1em;">',
+    title: 'Evaluating evidence for co-geography in the Anopheles–Plasmodium host-parasite system',
+    authors: 'Rehmann CT, Ralph PL, Kern AD',
+    year: 2024,
+    journal: 'G3',
+    type: 'Article',
+    doi: 'https://doi.org/10.1093/g3journal/jkae008',
+  },
+  {
+    id: 'p4',
+    icon: '<img src="icons/file.ico" style="height: 1em; width: 1em;">',
+    title: 'Accessible, realistic genome simulation with selection using stdpopsim',
+    authors: 'Gower G, Pope NS, ..., Rehmann CT, ..., Ralph PL, Kern AD',
+    year: 2025,
+    journal: 'Mol Biol Evol',
+    type: 'Article',
+    doi: 'https://doi.org/10.1093/molbev/msaf236',
+  },
+  {
+    id: 'p5',
+    icon: '<img src="icons/writing.png" style="height: 1em; width: 1em;">',
+    title: 'MKado: a toolkit for McDonald-Kreitman tests of natural selection',
+    authors: 'Rivera-Colón AG, Rehmann CT, Kern AD',
+    year: 2026,
+    journal: 'BioRXiv',
+    type: 'Preprint',
+    doi: 'https://doi.org/10.64898/2026.03.02.709122',
+  }
+];
+
+</script>
+<!-- ============================================================ -->
+<!-- END CONTENT                                                   -->
+<!-- ============================================================ -->
+
+<script>
+let sortCol = 'year', sortDir = 1;
+let selectedId = null;
+let filteredPubs = [...publications];
+
+function renderPubs() {
+  const list = document.getElementById('pub-list');
+  list.innerHTML = '';
+
+  const sorted = [...filteredPubs].sort((a, b) => {
+    let av = a[sortCol], bv = b[sortCol];
+    if (typeof av === 'string') av = av.toLowerCase();
+    if (typeof bv === 'string') bv = bv.toLowerCase();
+    return av < bv ? -sortDir : av > bv ? sortDir : 0;
+  });
+
+  sorted.forEach(p => {
+    const row = document.createElement('div');
+    row.className = 'pub-row' + (p.id === selectedId ? ' selected' : '');
+    row.id = 'row-' + p.id;
+
+    const typeColor = p.type === 'Preprint' || p.type === 'In press' ? '#884400' : '#000080';
+
+    row.innerHTML = `
+      <div class="pub-cell col-icon" style="justify-content:center;">${p.icon}</div>
+      <div class="pub-cell col-title title-cell">
+        <div>${p.title}</div>
+        <div class="pub-authors">${p.authors}</div>
+      </div>
+      <div class="pub-cell col-year">${p.year}</div>
+      <div class="pub-cell col-journal">${p.journal}</div>
+      <div class="pub-cell col-type">
+        <span class="pub-type-badge" style="border-color:${typeColor};color:${p.id === selectedId ? 'white' : typeColor};">${p.type}</span>
+      </div>
+      <div class="pub-cell col-link" style="justify-content:center;">
+        <a href="${p.doi}" target="_blank" onclick="event.stopPropagation();" style="font-size:10px;">DOI</a>
+      </div>
+    `;
+
+    row.addEventListener('click', () => selectPub(p.id));
+    row.addEventListener('dblclick', e => showDetail(p.id, e));
+    list.appendChild(row);
+  });
+
+  document.getElementById('status-count').textContent =
+    sorted.length + ' item' + (sorted.length !== 1 ? 's' : '');
+}
+
+function sortBy(col) {
+  if (sortCol === col) sortDir *= -1;
+  else { sortCol = col; sortDir = -1; }
+  document.querySelectorAll('.col-header').forEach(h => h.classList.remove('sorted-asc', 'sorted-desc'));
+  const hdr = document.getElementById('hdr-' + col);
+  if (hdr) hdr.classList.add(sortDir === 1 ? 'sorted-asc' : 'sorted-desc');
+  renderPubs();
+}
+
+function selectPub(id) {
+  selectedId = id;
+  renderPubs();
+  const p = publications.find(x => x.id === id);
+  document.getElementById('status-selected').textContent =
+    p.title.slice(0, 50) + (p.title.length > 50 ? '…' : '');
+}
+
+function showDetail(id, e) {
+  const p = publications.find(x => x.id === id);
+  document.getElementById('detail-popup-content').innerHTML = `
+    <h3>${p.title}</h3>
+    <p><strong>Authors:</strong> ${p.authors}</p>
+    <p><strong>Year:</strong> ${p.year} &nbsp;|&nbsp; <strong>Type:</strong> ${p.type}</p>
+    <p><strong>Journal:</strong> ${p.journal}</p>
+    <hr style="margin:6px 0;border:none;border-top:1px solid #aaa;">
+    <p style="margin-top:8px;"><a href="${p.doi}" target="_blank">View full paper →</a></p>
+  `;
+  const popup = document.getElementById('detail-popup');
+  popup.style.left = Math.min(e.clientX / 2, window.innerWidth / 2 - 340) + 'px';
+  popup.style.top  = Math.min(e.clientY / 2 - 20, window.innerHeight / 2 - 260) + 'px';
+  popup.classList.add('visible');
+}
+
+function filterPubs() {
+  const q = document.getElementById('search-box').value.toLowerCase();
+  filteredPubs = publications.filter(p =>
+    p.title.toLowerCase().includes(q) ||
+    p.authors.toLowerCase().includes(q) ||
+    p.journal.toLowerCase().includes(q) ||
+    String(p.year).includes(q)
+  );
+  document.getElementById('filter-label').textContent =
+    q ? `Showing ${filteredPubs.length} results` : 'All publications';
+  renderPubs();
+}
+
+document.addEventListener('click', e => {
+  const popup = document.getElementById('detail-popup');
+  if (popup.classList.contains('visible') && !popup.contains(e.target) && !e.target.closest('.pub-row')) {
+    popup.classList.remove('visible');
+  }
+});
+
+sortBy('year');
+</script>
+
+<script src="mac-components.js"></script>
+<script>MacComponents.init({ page: 'publications' });</script>
+<script src="mac-chrome.js"></script>
+</body>
+</html>

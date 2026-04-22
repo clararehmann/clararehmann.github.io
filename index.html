@@ -1,12 +1,113 @@
----
-layout: default
----
-<ul>
-	Test text 00
-	<!-- 
-	{% for post in site.posts %}
-	<li><a href="{{  post.url }}" title="{{ post.title }}"><img src="/assets/img/file.ico" title="{{ post.title }}" />{{ post.title }}</a></li>
-	{% endfor %}
+<!DOCTYPE html>
+<!-- index.html — About / Home page
+     CONTENT FILE: edit the marked section below to update your bio.
+     DESIGN FILE:  edit mac-styles.css to change the visual layout.
+     Image paths below assume local preview from the design/ directory.
+     For deployment, copy assets/ here or update paths as needed. -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clara Rehmann's website</title>
+<link rel="stylesheet" href="mac-styles.css">
+</head>
+<body>
 
-	-->
-</ul>
+<!-- MENU BAR (populated by mac-components.js) -->
+<div id="menubar"></div>
+
+<!-- DESKTOP -->
+<div id="desktop">
+
+
+  <!-- Main Finder Window -->
+  <div class="window" id="finder-window" style="left: 10px; top: 10px; width: calc(50vw - 90px);">
+    <div class="window-titlebar" onmousedown="startDrag(event, 'finder-window')">
+      <div class="titlebar-btn" onclick="document.getElementById('finder-window').style.display='none'" title="Close"></div>
+      <div class="titlebar-btn" title="Zoom"></div>
+      <div class="window-title">Clara Rehmann</div>
+    </div>
+    <div class="window-content" style="height: calc(50vh - 82px);">
+
+      <!-- Sidebar (populated by mac-components.js) -->
+      <div class="finder-sidebar"></div>
+
+      <!-- ============================================================ -->
+      <!-- CONTENT — edit this section to update your About page        -->
+      <!-- ============================================================ -->
+      <div class="finder-main">
+
+        <div class="profile-header">
+          <div class="profile-photo-frame" title="Profile photo — replace with your image">
+            👩‍🔬
+          </div>
+          <div class="profile-info">
+            <h1>Clara Rehmann</h1>
+            <p>PhD Candidate<br>
+            University of Oregon<br>
+            Institute of Ecology and Evolution<br>
+            <a href="mailto:crehmann@uoregon.edu">crehmann@uoregon.edu</a></p>
+          </div>
+        </div>
+
+        <p class="about-text">
+          I'm a fifth-year PhD candidate in the
+          <a href="https://kr-colab.github.io/" target="_blank">Kern Ralph Co-Lab</a>
+          at the University of Oregon. I mostly code in Python and am raising a bearded dragon named
+          <a href="fun.html">Aeg</a> (pronounced like what he came out of).
+          When I'm not on the computer, I enjoy making art, going to shows, and being outside.
+        </p>
+
+        <p class="about-text">
+          I'm primarily interested in studying geographic patterns of genetic variation,
+          and I have a soft spot for infectious disease (especially vector-borne and zoonotic ones).
+          In my research, I use simulation, statistics, and machine learning to make sense of the
+          evolutionary forces that underlie genetic data. My current projects center around identifying
+          geographic signatures of
+          <a href="https://doi.org/10.1093/g3journal/jkae008" target="_blank">co-dispersal</a>
+          and
+          <a href="https://doi.org/10.1093/molbev/msaf141" target="_blank">selective sweeps</a>
+          in the <em>Anopheles</em>–<em>Plasmodium</em> system.
+        </p>
+
+        <p class="about-text">
+          I've been on the board of
+          <a href="https://blogs.uoregon.edu/uowgs" target="_blank">UO Women in Graduate Science</a>
+          for four years and am also involved in
+          <a href="https://blogs.uoregon.edu/grebes" target="_blank">GrEBES</a>,
+          the graduate student organization for my department. I think population genetics is
+          super neat and it's important to me to help make the field (and science in general)
+          more inclusive and accessible.
+        </p>
+
+        <div class="info-box">
+          <div class="info-box-title">System Info</div>
+          <div class="info-row"><span class="info-label">Institution:</span>University of Oregon</div>
+          <div class="info-row"><span class="info-label">Department:</span>Institute of Ecology and Evolution</div>
+          <div class="info-row"><span class="info-label">Advisor:</span>Andrew Kern</div>
+          <div class="info-row"><span class="info-label">Lab:</span><a href="https://kr-colab.github.io/" target="_blank">Kern Ralph Co-Lab</a></div>
+          <div class="info-row"><span class="info-label">Year:</span>5th Year PhD Candidate</div>
+          <div class="info-row"><span class="info-label">GitHub:</span><a href="https://github.com/clararehmann" target="_blank">clararehmann</a></div>
+        </div>
+
+      </div>
+      <!-- ============================================================ -->
+      <!-- END CONTENT                                                   -->
+      <!-- ============================================================ -->
+
+    </div>
+    <div class="window-statusbar">
+      <span>5 items</span>
+      <div class="statusbar-divider"></div>
+      <span>University of Oregon — Eugene, OR</span>
+    </div>
+    <div class="resize-handle"></div>
+  </div>
+
+</div>
+
+<script src="mac-components.js"></script>
+<script>MacComponents.init({ page: 'index' });</script>
+<script src="mac-chrome.js"></script>
+</body>
+</html>
