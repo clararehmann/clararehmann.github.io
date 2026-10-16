@@ -14,7 +14,7 @@ pdf_url: https://github.com/clararehmann/crehmann-CV/blob/master/crehmann_CV.pdf
 ## Research Experience
 
 ### Postdoctoral Fellow
-> Advisors: Dr. John Lees, Dr. Mara Lawniczak, European Bioinformatics Institute & Wellcome Sanger Institute, Hinxton, UK - September 2026-present
+> Advisors: Dr. John Lees & Dr. Mara Lawniczak, European Bioinformatics Institute & Wellcome Sanger Institute, Hinxton, UK - September 2026-present
 Developing geographically-informed approaches to realistically model the spread of gene drive and other vector control efforts for population suppression in African malaria vectors.
 
 ### Postdoctoral Researcher
