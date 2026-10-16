@@ -403,6 +403,10 @@ h1, h2, h3, .cv-section-title {
   margin-top: 10px;
   font-size: 11px;
 }
+#finder-window .info-box,
+#contact-window .info-box {
+  font-family: "EspySans", "Chicago", "VT323", "Courier New", monospace;
+}
 .info-box-title {
   font-weight: bold;
   margin-bottom: 4px;

@@ -6,6 +6,7 @@ Usage:
     python3 build.py --check   # dry run, print diffs without writing
 """
 
+import json
 import re
 import sys
 from html import escape as html_escape
@@ -92,6 +93,76 @@ def inject(html_path, inner_html, check=CHECK):
         print(f'  updated {html_path}')
     else:
         print(f'  {html_path}: no changes')
+
+
+# ---------------------------------------------------------------------------
+# About dialog generation
+# ---------------------------------------------------------------------------
+
+def inject_about_dialog(dialog_html, check=CHECK):
+    path = ROOT / 'mac-components.js'
+    source = path.read_text()
+    start_marker = '// ABOUT DIALOG CONTENT START'
+    end_marker = '// ABOUT DIALOG CONTENT END'
+    if start_marker not in source or end_marker not in source:
+        print(f'  WARNING: about dialog markers not found in {path}')
+        return
+
+    start = source.index(start_marker) + len(start_marker)
+    end = source.index(end_marker, start)
+    generated = f'\nconst ABOUT_DIALOG_CONTENT = {json.dumps(dialog_html, ensure_ascii=False)};\n'
+    new_source = source[:start] + generated + source[end:]
+
+    if check:
+        import difflib
+        old_lines = source.splitlines(keepends=True)
+        new_lines = new_source.splitlines(keepends=True)
+        diff = list(difflib.unified_diff(old_lines, new_lines, fromfile=str(path), tofile='(rebuilt)'))
+        if diff:
+            print(''.join(diff))
+        else:
+            print(f'  {path}: no changes')
+        return
+
+    if new_source != source:
+        path.write_text(new_source)
+        print(f'  updated {path}')
+    else:
+        print(f'  {path}: no changes')
+
+
+def parse_about_dialog(text):
+    title = ''
+    version = ''
+    info_lines = []
+
+    for line in text.splitlines():
+        if line.startswith('# ') and not title:
+            title = inline(line[2:].strip())
+        elif line.startswith('> ') and not version:
+            version = inline(line[2:].strip())
+        else:
+            info_lines.append(inline(line.strip()) if line.strip() else '')
+
+    while info_lines and not info_lines[0]:
+        info_lines.pop(0)
+    while info_lines and not info_lines[-1]:
+        info_lines.pop()
+
+    info_html = '<br>\n'.join(info_lines)
+    return (
+        '            <div class="dialog-logo"><img src="icons/apple.png" style="height:1em;width:1em;"></div>\n'
+        f'            <div class="dialog-name">{title}</div>\n'
+        f'            <div class="dialog-version">{version}</div>\n'
+        '            <div class="dialog-bar"></div>\n'
+        f'            <div class="dialog-info">\n              {info_html}\n            </div>'
+    )
+
+
+def build_about_dialog():
+    print('Building About This Mac dialog...')
+    text = (CONTENT / 'about.md').read_text()
+    inject_about_dialog(parse_about_dialog(text))
 
 
 # ---------------------------------------------------------------------------
@@ -368,6 +439,7 @@ def build_contact():
 def main():
     if CHECK:
         print('--- DRY RUN (--check mode, no files written) ---')
+    build_about_dialog()
     build_cv()
     build_index()
     build_contact()

@@ -4,6 +4,10 @@
 
 const ICONS = 'icons/';
 
+// ABOUT DIALOG CONTENT START
+const ABOUT_DIALOG_CONTENT = "            <div class=\"dialog-logo\"><img src=\"icons/apple.png\" style=\"height:1em;width:1em;\"></div>\n            <div class=\"dialog-name\">CT OS 8.1</div>\n            <div class=\"dialog-version\">© Clara Rehmann 2026</div>\n            <div class=\"dialog-bar\"></div>\n            <div class=\"dialog-info\">\n              <strong>Clara Rehmann</strong><br>\nPostdoctoral Fellow<br>\nEMBL-EBI / Wellcome Sanger Institute<br>\n<br>\nBuilt-in Memory: Spatial population genetics<br>\nVersion: 2026.10 — Cambridge, UK\n            </div>";
+// ABOUT DIALOG CONTENT END
+
 const MacComponents = {
 
   init(opts = {}) {
@@ -168,18 +172,7 @@ const MacComponents = {
             <div class="window-title">About This Mac</div>
           </div>
           <div class="dialog-content">
-            <div class="dialog-logo"><img src="icons/apple.png" style="height:1em;width:1em;"></div>
-            <div class="dialog-name">CT OS 8.1</div>
-            <div class="dialog-version">© Clara Rehmann 2026</div>
-            <div class="dialog-bar"></div>
-            <div class="dialog-info">
-              <strong>Clara Rehmann</strong><br>
-              PhD Candidate, University of Oregon<br>
-              Institute of Ecology and Evolution<br>
-              crehmann@uoregon.edu<br><br>
-              Built-in Memory: Spatial population genetics<br>
-              Version: 2026.05 — Eugene, Oregon
-            </div>
+            ${ABOUT_DIALOG_CONTENT}
             <button class="dialog-btn" onclick="hideAboutDialog()">OK</button>
           </div>
         </div>
