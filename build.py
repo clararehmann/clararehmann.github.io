@@ -37,13 +37,15 @@ def escape(text):
 
 
 def inline(text):
-    """Render inline Markdown: **bold**, _em_, [link](url). Escapes & < > in text nodes."""
+    """Render inline Markdown: code, **bold**, _em_, and [links](url)."""
     # Split on inline tokens so we can escape only text runs
-    token_re = re.compile(r'(\*\*.*?\*\*|_.*?_|\*.*?\*|\[.*?\]\(.*?\))')
+    token_re = re.compile(r'(`[^`]+`|\*\*.*?\*\*|_.*?_|\*.*?\*|\[.*?\]\(.*?\))')
     parts = token_re.split(text)
     result = []
     for part in parts:
-        if re.match(r'\*\*(.*?)\*\*', part):
+        if re.match(r'`[^`]+`', part):
+            result.append(f'<code>{escape(part[1:-1])}</code>')
+        elif re.match(r'\*\*(.*?)\*\*', part):
             inner = part[2:-2]
             result.append(f'<strong>{inline(inner)}</strong>')
         elif re.match(r'[_*](.*?)[_*]', part):
