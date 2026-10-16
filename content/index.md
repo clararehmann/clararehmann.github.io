@@ -1,4 +1,8 @@
 photo: assets/img/CP-60101022.jpg
+name: Clara Rehmann
+position: Postdoctoral Fellow
+institution: EMBL-EBI / Wellcome Sanger
+email: rehmann@ebi.ac.uk
 
 [System Info]
 Institution: EMBL-EBI / Wellcome Sanger

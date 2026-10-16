@@ -8,6 +8,7 @@ Usage:
 
 import re
 import sys
+from html import escape as html_escape
 from pathlib import Path
 
 ROOT = Path(__file__).parent
@@ -233,11 +234,17 @@ def parse_infopage(text, with_profile=False):
     out = []
     i = 0
 
-    # Profile photo line (index only)
+    # Profile metadata at the top of index.md
     photo_src = None
+    profile = {}
     if with_profile and lines and lines[0].startswith('photo:'):
-        photo_src = lines[0].split(':', 1)[1].strip()
-        i = 1
+        while i < len(lines) and lines[i].strip():
+            if ':' not in lines[i]:
+                break
+            key, value = lines[i].split(':', 1)
+            profile[key.strip()] = value.strip()
+            i += 1
+        photo_src = profile.get('photo')
 
     # Skip blank line after photo
     while i < len(lines) and not lines[i].strip():
@@ -293,17 +300,25 @@ def parse_infopage(text, with_profile=False):
     # Render
     if with_profile and photo_src:
         # Profile header comes before paragraphs; the bio paragraphs come next
+        profile_details = [
+            inline(profile[key])
+            for key in ('position', 'institution', 'department')
+            if profile.get(key)
+        ]
+        email = profile.get('email')
+        if email:
+            profile_details.append(
+                f'<a href="mailto:{html_escape(email, quote=True)}">{inline(email)}</a>'
+            )
+        profile_details_html = '<br>\n            '.join(profile_details)
         out.append(
             f'        <div class="profile-header">\n'
             f'          <div class="profile-photo-frame" >\n'
-            f'            <img src="{photo_src}" >\n'
+            f'            <img src="{html_escape(photo_src, quote=True)}" >\n'
             f'          </div>\n'
             f'          <div class="profile-info">\n'
-            f'            <h1>Clara Rehmann</h1>\n'
-            f'            <p>PhD Candidate<br>\n'
-            f'            University of Oregon<br>\n'
-            f'            Institute of Ecology and Evolution<br>\n'
-            f'            <a href="mailto:crehmann@uoregon.edu">crehmann@uoregon.edu</a></p>\n'
+            f'            <h1>{inline(profile.get("name", ""))}</h1>\n'
+            f'            <p>{profile_details_html}</p>\n'
             f'          </div>\n'
             f'        </div>'
         )
