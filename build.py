@@ -404,7 +404,7 @@ def parse_infopage(text, with_profile=False):
                 box_html += (
                     f'          <div class="info-row">'
                     f'<span class="info-label">{escape(label)}:</span>'
-                    f'{val_html}</div>\n'
+                    f'<span class="info-value">{val_html}</span></div>\n'
                 )
             else:
                 box_html += (
