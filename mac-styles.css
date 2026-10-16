@@ -54,7 +54,7 @@
 html { overflow: hidden; }
 
 body {
-  font-family: "EspySans", "VT323", "Courier New", monospace;
+  font-family: Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 12px;
   background: var(--mac-desktop) url("assets/img/wallpaper.jpg") repeat;
@@ -67,6 +67,10 @@ body {
   user-select: none;
   transform: scale(2);
   transform-origin: top left;
+}
+
+h1, h2, h3, .cv-section-title {
+  font-family: "EspySans", "VT323", "Courier New", monospace;
 }
 
 /* ===== MENU BAR ===== */
@@ -165,7 +169,7 @@ body {
   border: 1px solid var(--mac-black);
   box-shadow: 2px 2px 0 var(--mac-black);
   min-width: 200px;
-  font-family: "EspySans", "VT323", "Courier New", monospace;
+  font-family: Helvetica, Arial, sans-serif;
   z-index: 5;
 }
 
@@ -561,7 +565,7 @@ body {
   box-shadow: 3px 3px 0 var(--mac-black);
   width: 320px;
   z-index: 500;
-  font-family: "EspySans", "VT323", "Courier New", monospace;
+  font-family: Helvetica, Arial, sans-serif;
 }
 .detail-popup.visible { display: block; }
 .detail-popup-titlebar {
@@ -703,7 +707,7 @@ body {
   border: 1px solid var(--mac-black);
   box-shadow: 2px 2px 0 var(--mac-black);
   width: 300px;
-  font-family: "EspySans", "VT323", "Courier New", monospace;
+  font-family: Helvetica, Arial, sans-serif;
 }
 .dialog-content { padding: 16px; font-size: 11px; }
 .dialog-logo { text-align: center; font-size: 40px; margin-bottom: 6px; }
