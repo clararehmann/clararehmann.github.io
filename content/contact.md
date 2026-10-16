@@ -1,12 +1,7 @@
 [Get In Touch]
-Email: [crehmann@uoregon.edu](mailto:crehmann@uoregon.edu)
-Office: Pacific Hall, University of Oregon
-Mailing: Institute of Ecology and Evolution
-: University of Oregon
-: Eugene, OR 97403
+Email: [rehmann@ebi.ac.uk](mailto:rehmann@ebi.ac.uk)
 
 [Online]
 GitHub: [github.com/clararehmann](https://github.com/clararehmann)
 Google Scholar: [Scholar profile](https://scholar.google.com/citations?user=clararehmann)
 BlueSky: [@ramencult.bsky.social](https://bsky.app/profile/ramencult.bsky.social)
-Lab website: [kr-colab.github.io](https://kr-colab.github.io/)

@@ -3,8 +3,7 @@ pdf_url: https://github.com/clararehmann/crehmann-CV/blob/master/crehmann_CV.pdf
 ## Education
 
 ### Ph.D. Ecology and Evolutionary Biology
-> University of Oregon, Eugene, OR — September 2021–present
-Anticipated graduation: April 2026
+> University of Oregon, Eugene, OR — September 2021–April 2026
 
 ### Bachelor of Science, Biology
 > University of Oregon, Eugene, OR — September 2018–June 2020
@@ -14,9 +13,17 @@ Anticipated graduation: April 2026
 
 ## Research Experience
 
+### Postdoctoral Fellow
+> Advisors: Dr. John Lees, Dr. Mara Lawniczak, European Bioinformatics Institute & Wellcome Sanger Institute, Hinxton, UK - September 2026-present
+Developing geographically-informed approaches to realistically model the spread of gene drive and other vector control efforts for population suppression in African malaria vectors.
+
+### Postdoctoral Researcher
+> Advisor: Dr. Andrew Kern, Institute of Ecology & Evolution, University of Oregon - April 2026-September 2026
+Applied novel geographically-informed population genetics methods to identify globally and locally convergent selection pressures in malaria vectors.
+
 ### PhD Student
-> Advisor: Dr. Andrew Kern, Institute of Ecology & Evolution, University of Oregon — September 2022–present
-Developing and applying geographically-informed population genetics methods with a focus on _Anopheles gambiae_. Projects include correcting for spatial bias in machine learning inference of location from genetic data, constructing open-source resources for population genetic simulation and analysis, and using novel space-based methods to identify positively-selected variants.
+> Advisor: Dr. Andrew Kern, Institute of Ecology & Evolution, University of Oregon — September 2022–April 2026
+Developed and applied geographically-informed population genetics methods with a focus on _Anopheles gambiae_. Projects included correcting for spatial bias in machine learning inference of location from genetic data, constructing open-source resources for population genetic simulation and analysis, and using novel space-based methods to identify positively-selected variants.
 
 ### Rotation Student
 > Advisor: Dr. William Cresko, Institute of Ecology & Evolution, University of Oregon — March 2022–June 2022
@@ -39,6 +46,8 @@ Used computational and experimental methods to investigate coevolutionary dynami
 Experimental work investigating impacts of inaccurate translation caused by the loss of aminoacyl-tRNA synthetase editing on _E. coli_ fitness.
 
 ## Publications
+
+### Rivera-Colón AG, **Rehmann CT**, Kern AD. MKado: a toolkit for McDonald-Kreitman tests of natural selection. _G3 Genes|Genomes|Genetics_, 16(8), jkag142, August 2026. DOI: [10.1093/g3journal/jkag142](https://doi.org/10.1093/g3journal/jkag142)
 
 ###
 Gower G, Pope NS, Rodrigues MF, Tittes S, Tran LN, Alam O, Cavassim MIA, Fields PD, Haller BC, Huang X, Jeffrey B, Korfmann K, Kyriazis CC, Min J, Rebello I, **Rehmann CT**, Small ST, Smith CCR, Tsambos G, Wong Y, Zhang Y, Huber CD, Gorjanc G, Ragsdale AP, Gronau I, Gutenkunst RN, Kelleher J, Lohmueller KE, Schrider DR, Ralph PL, Kern AD. Accessible, realistic genome simulation with selection using stdpopsim. _Molecular Biology and Evolution_, msaf236, September 2025. DOI: [10.1093/molbev/msaf236](https://doi.org/10.1093/molbev/msaf236)
@@ -91,6 +100,10 @@ Assisted in instruction of students during wet lab activities.
 Assisted in instruction of students during lectures and wet and dry lab activities.
 
 ## Presentations
+
+### Population, Evolutionary, and Quantitative Genetics - Poster
+> Genetics Society of America, Asilomar, CA - June 2026
+_Bugs in the balance: local adaptaiton and balancing selection shape amino acid variation in *Anopheles*_
 
 ### ESPOD Fellowship Talks — Invited Talk
 > European Bioinformatics Institute, Hinxton, United Kingdom — December 2025
@@ -151,7 +164,7 @@ _Location, location, location: Dissecting errors in machine learning prediction 
 ## Outreach & Community Involvement
 
 ### Women in Graduate Science
-> University of Oregon — Fall 2021–present
+> University of Oregon — Fall 2021–June 2026
 - **Webmaster** (AY 2025–2026): Updating the WGS website and social media pages; promoting WGS events and sharing information from associated organizations.
 - **President** (AY 2024–2025): Conducting and aiding in organization of WGS meetings and events; collaborating with the Graduate School, UO Foundation, and Associated Students of the UO; promoting the mission of WGS.
 - **Public Relations Chair** (AY 2023–2024): Communicating with WGS members; advertising WGS events to the on- and off-campus community.
@@ -159,12 +172,12 @@ _Location, location, location: Dissecting errors in machine learning prediction 
 - **Mad Duck Outreach** (Winter 2023–present): Helping facilitate on-campus science activities for middle school students.
 
 ### Graduate Evolutionary Biology and Ecology Students (GrEBES)
-> University of Oregon — Fall 2021–present
+> University of Oregon — Fall 2021-June 2026
 - **Public Relations & Website Organizer** (AY 2025–2026): Advertising GrEBES events to the on- and off-campus community; designing and maintaining organization website.
 - **SPECIE2S Chair** (AY 2023–2024): Organizing and facilitating weekly writing groups and peer feedback sessions.
 - **Seminar Committee** (AY 2022–2023, 2023–2024, 2024–2025): Helping plan and organize an annual free public seminar on current topics in biology.
 
 ### Professional Memberships
 - Genetics Society of America — Winter 2022–present
-- American Society of Naturalists — Winter 2023–present
+- American Society of Naturalists — Winter 2023–Winter 2026
 - Society for Molecular Biology and Evolution — Spring 2023–present
