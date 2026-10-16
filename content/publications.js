@@ -3,6 +3,26 @@
 // type: 'Article', 'Preprint', 'In press'
 
 const publications = [
+    {
+    id: 'p5',
+    icon: '<img src="icons/writing.png" style="height: 1em; width: 1em;">',
+    title: 'MKado: a toolkit for McDonald-Kreitman tests of natural selection',
+    authors: 'Rivera-Colón AG, Rehmann CT, Kern AD',
+    year: 2026,
+    journal: 'G3',
+    type: 'Article',
+    doi: 'https://doi.org/10.1093/g3journal/jkag142',
+    },
+    {
+    id: 'p4',
+    icon: '<img src="icons/file.ico" style="height: 1em; width: 1em;">',
+    title: 'Accessible, realistic genome simulation with selection using stdpopsim',
+    authors: 'Gower G, Pope NS, ..., Rehmann CT, ..., Ralph PL, Kern AD',
+    year: 2025,
+    journal: 'Mol Biol Evol',
+    type: 'Article',
+    doi: 'https://doi.org/10.1093/molbev/msaf236',
+  },
   {
     id: 'p1',
     icon: '<img src="icons/file.ico" style="height: 1em; width: 1em;">',
@@ -33,24 +53,4 @@ const publications = [
     type: 'Article',
     doi: 'https://doi.org/10.1093/g3journal/jkae008',
   },
-  {
-    id: 'p4',
-    icon: '<img src="icons/file.ico" style="height: 1em; width: 1em;">',
-    title: 'Accessible, realistic genome simulation with selection using stdpopsim',
-    authors: 'Gower G, Pope NS, ..., Rehmann CT, ..., Ralph PL, Kern AD',
-    year: 2025,
-    journal: 'Mol Biol Evol',
-    type: 'Article',
-    doi: 'https://doi.org/10.1093/molbev/msaf236',
-  },
-  {
-    id: 'p5',
-    icon: '<img src="icons/writing.png" style="height: 1em; width: 1em;">',
-    title: 'MKado: a toolkit for McDonald-Kreitman tests of natural selection',
-    authors: 'Rivera-Colón AG, Rehmann CT, Kern AD',
-    year: 2026,
-    journal: 'BioRXiv',
-    type: 'Preprint',
-    doi: 'https://doi.org/10.64898/2026.03.02.709122',
-  }
 ];
